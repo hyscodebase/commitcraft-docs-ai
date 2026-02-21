@@ -1,0 +1,7 @@
+project_id = "sjtxejleznrgiuaucpdr"
+
+[functions.fetch_github_context]
+verify_jwt = false
+
+[functions.generate_doc_pack]
+verify_jwt = false

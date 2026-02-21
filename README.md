@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# CommitCraft
 
-## Project info
+> GitHub 공개 저장소의 커밋/변경(diff)/README를 근거로 SPEC.md, ADR.md, 데모 스크립트, 체크리스트를 자동 생성하는 DocOps 에이전트 웹앱.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 기능
 
-## How can I edit this code?
+- **커밋 기반 추출**: 공개 repo의 커밋, diff, README를 자동 수집
+- **문서 자동 생성**: SPEC, ADR, 데모 스크립트, 체크리스트 4종을 AI로 생성
+- **근거 기반**: 모든 생성물에 커밋 해시·파일 경로 등 Evidence를 표시
+- **Judge Mode**: 해카톤 심사 관점의 개선 피드백 자동 제공
+- **편집/Export**: 결과물을 편집하고 Copy/Download(.md) 가능
+- **세션 관리**: 이전 생성 세션을 저장하고 재열람 가능
 
-There are several ways of editing your application.
+## 📖 사용 방법
 
-**Use Lovable**
+1. **Repo URL 입력**: GitHub 공개 저장소 URL을 입력합니다.
+2. **범위 선택**: 최근 N개 커밋 또는 base/head ref를 선택합니다.
+3. **Generate**: AI가 소스를 분석하고 문서 4종 + Judge 피드백을 생성합니다.
+4. **편집/Export**: 각 탭에서 결과물을 편집하고 Copy 또는 Download 합니다.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠 기술 스택
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React + TypeScript + Tailwind CSS + shadcn/ui
+- **Backend**: Lovable Cloud (Edge Functions, PostgreSQL, Secrets)
+- **AI**: Lovable AI Gateway (Google Gemini)
+- **Hosting**: Lovable
 
-**Use your preferred IDE**
+## ⚠️ 주의사항
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **공개(public) 저장소만 지원**합니다.
+- 저작권이 있는 코드나 **개인정보가 포함된 저장소는 사용하지 마세요**.
+- AI가 생성한 결과물은 반드시 **직접 검토 후 사용**하세요.
+- GitHub API rate limit으로 인해 호출이 제한될 수 있습니다. PAT를 입력하면 완화됩니다.
+- PAT는 서버로 전송되지만 저장되지 않으며, 현재 세션에서만 사용됩니다.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📜 출처 / 라이선스
 
-Follow these steps:
+- **UI 프레임워크**: [shadcn/ui](https://ui.shadcn.com/) (MIT License)
+- **아이콘**: [Lucide](https://lucide.dev/) (ISC License)
+- **AI**: Lovable AI Gateway
+- **Backend**: Lovable Cloud
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🏆 OKKY 바이브코딩 해커톤
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- [공식 사이트](https://vibecoding.okky.kr/)
+- [해커톤 저장소](https://github.com/okky-lab/vibe-coding-hackathon)
+- [공정성 가이드](https://vibecoding.okky.kr/docs/fairness-guide)
+- [행동강령](https://vibecoding.okky.kr/docs/code-of-conduct)
